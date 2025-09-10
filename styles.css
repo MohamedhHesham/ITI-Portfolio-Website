@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #ff6347;
+}
+body{
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+main{
+    display:grid;
+    grid-area: main;
+    grid-template-areas:"home"
+    "About"
+    "Projects"
+    "Contact";
+     row-gap: 60px;
+}
+header{
+    grid-area: header;
+    text-align: center;
+    padding: 20px 0;
+}
+header ul{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+}
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: home;
+  align-items: center;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#intro{
+  text-align: center;
+}
+nav{
+  background-color: #333;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+}
+.Aboutme{
+  grid-area: About;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#abt{
+  text-align: center;
+}
+#cnt{
+  text-align: justify;
+  padding: 0 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.Projects{
+  grid-area: Projects;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.project-item{
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.contact{
+  grid-area: Contact;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+footer{
+    grid-area: footer;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
